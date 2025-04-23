@@ -1,0 +1,55 @@
+<HTML>
+
+    <head>
+		<br>
+        <title>Bookshop</title>
+
+		<style>
+			html, body {
+				    height: 100%;
+				    margin: 0;
+				  }
+		  body {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    background-color: lightblue;
+		    font-family: sans-serif;
+		  }
+		  h1 {
+		    color: darkblue;
+		    margin-bottom: 20px;
+		  }
+		  .buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+		  }
+		  .buttons button {
+		
+		    padding: 16px;
+		    font-size: 20px;
+		    min-width: 200px;
+			min-height: 100px;
+		    border: none;
+		    border-radius: 10px;
+		    color: lightblue;
+		    background-color: darkblue;
+		    
+		  }
+		  
+		</style>
+    </head>
+    <body>
+        <h1> Welcome to the Bookshop</h1>
+
+		<div class="buttons">
+			<button type = "button" onclick="window.location.href='/api/users/register'">Customer</button>
+			<button a href ="/Admin">Admin</button>
+		</div>
+        
+    </body>
+
+</HTML>

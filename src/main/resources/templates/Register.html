@@ -1,0 +1,98 @@
+<HTML>
+
+    <head>
+		<br>
+        <title>Register</title>
+
+		<style>
+			html, body {
+				    height: 100%;
+				    margin: 0;
+				  }
+		  body {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    background-color: lightblue;
+		    font-family: sans-serif;
+		  }
+		  h1 {
+		    color: darkblue;
+		    margin-bottom: 20px;
+          }
+		  
+		  h2{
+			font-size: 12px
+		  }
+		  
+		  .textfields{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 300px;
+		  }
+           
+          .textfields input{
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            border: 5px;
+            border-radius: 4px;
+
+          }   
+
+          .buttons {
+			display: flex;
+			flex-direction: flex;
+			gap: 10px;
+			align-items: center;
+		  }
+		  .buttons button {
+		
+		    padding: 16px;
+		    font-size: 20px;
+		    min-width: 50px;
+			min-height: 50px;
+			margin-top: 10px;
+		    border: none;
+		    border-radius: 10px;
+		    color: lightblue;
+		    background-color: darkblue;
+		    
+		  }	  
+		</style>
+    </head>
+    <body>
+        <h1>Create An Account</h1>
+
+		<form method="post" action="register">
+		<div class="textfields">
+            <h2>Username</h2>
+			<input type = "text" name = "Username">
+            <h2>Password</h2>
+			<input type = "text" name = "Password">
+            <h2>Email</h2>
+			<input type = "text" name = "Email">
+            <h2>Phone Number</h2>
+			<input type = "text" name = "Phone number">
+            <h2>Street</h2>
+			<input type = "text" name = "Street">
+            <h2>City</h2>
+			<input type = "text" name = "City">
+            <h2>County</h2>
+			<input type = "text" name = "County">
+		</div>
+
+        <div class = "buttons">
+        <button type = "submit">Sign up</button>
+		<button type = button onclick="window.location.href='/api/users/login'">Or log in</button>
+        </div>
+		
+
+
+        
+    </body>
+
+</HTML>
