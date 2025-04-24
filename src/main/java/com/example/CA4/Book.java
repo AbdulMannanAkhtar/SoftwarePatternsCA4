@@ -42,6 +42,9 @@ public class Book {
 	@Column(name = "Image")
 	private String imageUri;
 	
+	@Column(name = "Quantity")
+	private Integer quantity;
+	
 	@ManyToMany
 	//@JoinColumn(name = "orderId")
 	private List<Order> order = new ArrayList<>();
@@ -127,6 +130,16 @@ public class Book {
 	public void setImageUri(String imageUri)
 	{
 		this.imageUri = imageUri;
+	}
+	
+	public int getQuantity()
+	{
+		return this.quantity;
+	}
+	
+	public void setQuantity(Integer quantity)
+	{
+		this.quantity = quantity;
 	}
 	
 	public List<Order> getOrder()

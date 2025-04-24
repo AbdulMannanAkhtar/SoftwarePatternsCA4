@@ -2,7 +2,7 @@
 
     <head>
 		<br>
-        <title>Home</title>
+        <title>Add Book</title>
 
 		<style>
 			html, body {
@@ -65,11 +65,38 @@
 		</style>
     </head>
     <body>
-        <h1>BookShop</h1>
-		<h2>Software patterns CA4</h2>
+        <h1>Add a Book</h1>
 
-		<form method="post" action="register">
-	
+		<form method="post" action="addBook">
+		<div class="textfields">
+            <h2>Title</h2>
+			<input type = "text" name = "Title">
+            <h2>Author</h2>
+			<input type = "text" name = "Author">
+            <h2>Publisher</h2>
+			<input type = "text" name = "Publisher">
+            <h2>Price</h2>
+			<input type = "text" name = "Price">
+            <h2>Category</h2>
+			<input type = "text" name = "Category">
+            <h2>Isbn</h2>
+			<input type = "text" name = "Isbn">
+            <h2>Image</h2>
+			<input type = "text" name = "ImageUri">
+            <h2>Quantity</h2>
+			<input type = "text" name = "Quantity">
+		</div>
+
+        <div class = "buttons">
+        <button type = "submit">AddBook</button>
+		
+		
+		
+        </div>
+		 
+
+
+        
     </body>
 
 </HTML>
