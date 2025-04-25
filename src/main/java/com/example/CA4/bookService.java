@@ -1,7 +1,11 @@
 package com.example.CA4;
 
+import java.awt.Component;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -9,11 +13,13 @@ import org.springframework.stereotype.Service;
 public class bookService {
 	
 	private bookRepo bRepo;
+	private final Map<String, BookTemplate> searchMap;
 	
-	public bookService(bookRepo bRepo)
+	public bookService(bookRepo bRepo, Map<String, BookTemplate> searchMap)
 	{
 		super();
 		this.bRepo = bRepo;
+		this.searchMap = searchMap;
 		
 	}
 	
@@ -66,5 +72,15 @@ public class bookService {
 		
 		bRepo.save(b);
 	}
+	
+	public List<Book> search(String filterKey, String search)
+	{
+        BookTemplate sm = searchMap.getOrDefault(filterKey, searchMap.get("byTitle"));
+        
+        return sm.searchBy(search);
+    }
+	
+	
+	
 
 }
