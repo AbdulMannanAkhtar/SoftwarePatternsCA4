@@ -119,7 +119,7 @@
 			<table>
 				<thead>
 					<tr>
-						<th>ID</th>
+						<th>Select</th>
 						<th>Title</th>
 						<th>Author</th>
 						<th>Publisher</th>
@@ -133,7 +133,6 @@
 				<tbody>
 					<tr th:each="book : ${books}">
 						<td><input type = "checkbox" name = "bookIds" th:value = "${book.BookId}"></td>
-						<td th:text="${book.BookId}">BookId</td>
 						<td th:text="${book.title}">Title</td>
 						<td th:text="${book.author}">Author</td>
 						<td th:text="${book.publisher}">Publisher</td>
