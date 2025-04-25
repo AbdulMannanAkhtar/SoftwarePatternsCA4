@@ -2,7 +2,7 @@
 
     <head>
 		<br>
-        <title>Add Book</title>
+        <title>UpdatedBook</title>
 
 		<style>
 			html, body {
@@ -56,7 +56,7 @@
 		    min-width: 50px;
 			min-height: 50px;
 			margin-top: 10px;
-		    border: none;
+		    border: none; 
 		    border-radius: 10px;
 		    color: lightblue;
 		    background-color: darkblue;
@@ -65,38 +65,17 @@
 		</style>
     </head>
     <body>
-        <h1>Add a Book</h1>
+        <h1>Book Updated</h1>
+		
 
-		<form method="post" action="addBook">
-		<div class="textfields">
-            <h2>Title</h2>
-			<input type = "text" name = "Title">
-            <h2>Author</h2>
-			<input type = "text" name = "Author">
-            <h2>Publisher</h2>
-			<input type = "text" name = "Publisher">
-            <h2>Price</h2> 
-			<input type = "text" name = "Price">
-            <h2>Category</h2>
-			<input type = "text" name = "Category">
-            <h2>Isbn</h2>
-			<input type = "text" name = "Isbn">
-            <h2>Image</h2>
-			<input type = "text" name = "ImageUri">
-            <h2>Quantity</h2>
-			<input type = "text" name = "Quantity">
+        <div class="buttons">
+			<button type = "button" onclick="window.location.href='/api/admin/adminDash'">Back</button>
 		</div>
 
-        <div class = "buttons">
-        <button type = "submit">AddBook</button>
-		
-		
-		
-        </div>
-		 
-
-
         
+
+		
+	
     </body>
 
 </HTML>

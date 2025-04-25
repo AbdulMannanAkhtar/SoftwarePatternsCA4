@@ -14,12 +14,17 @@ public class bookController {
 	
 	private bookService bService;
 	private bookFactory bFactory;
+	private customerService cService;
+	private customerFactory cFactory;
 	
-	public bookController(bookService bService, bookFactory bFactory) 
+	
+	public bookController(bookService bService, bookFactory bFactory, customerService cService, customerFactory cFactory) 
 	{
 		super();
 		this.bService = bService;
 		this.bFactory = bFactory;
+		this.cService = cService;
+		this.cFactory = cFactory;
 	}
 	
 	@GetMapping("/adminDash")
@@ -48,6 +53,30 @@ public class bookController {
 		bService.addBook(b);
 		
 		return "addedBook";
+	}
+	
+	@GetMapping("/allCustomers")
+	public String customers(Model m)
+	{
+		List<customer> customers =  cService.allCustomers();
+		
+		m.addAttribute("customers", customers);
+		
+		return "allCustomers";
+	}
+	
+	@GetMapping("/updateBook")
+	public String updateBook()
+	{
+		return "updateBook";
+	}
+	
+	@PostMapping("/updateBook")
+	public String updateBook(bookCommand bCommand)
+	{
+		bService.handle(bCommand);
+		
+		return ("updatedBook");
 	}
 	
 	

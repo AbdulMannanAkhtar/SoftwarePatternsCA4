@@ -1,0 +1,93 @@
+<HTML xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+		<br>
+        <title>Customers</title>
+
+		<style>
+			html, body {
+				    height: 100%;
+				    margin: 0;
+				  }
+		  body { 
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    background-color: lightblue;
+		    font-family: sans-serif;
+		  }
+		  h1 {
+		    color: darkblue;
+		    margin-bottom: 20px;
+		  }
+		  .buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+		  }
+		  .buttons button {
+		
+		    padding: 16px;
+		    font-size: 20px;
+		    min-width: 100px;
+			min-height: 50px;
+		    border: none;
+		    border-radius: 10px;
+		    color: lightblue;
+		    background-color: darkblue;
+		    
+		  }
+          table{
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            margin-bottom: 10px;
+            background-color: darkblue;
+          }
+          th, td{
+            border: 1px solid;
+            padding: 8px;
+            text-align: left;
+          }
+          th{
+            background: white;
+          }
+          
+		  
+		</style>
+    </head>
+    <body>
+        <h1>Bookshop Customers</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>County</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="customer : ${customers}">
+                    <td th:text="${customer.userId}">CustomerID</td>
+                    <td th:text="${customer.username}">Username</td>
+                    <td th:text="${customer.email}">Email</td>
+                    <td th:text="${customer.phoneNumber}">Phone Number</td>
+                    <td th:text="${customer.street}">Street</td>
+                    <td th:text="${customer.city}">City</td>
+                    <td th:text="${customer.county}">County</td>
+                </tr>
+            </tbody> 
+        </table>
+
+		<div class="buttons">
+			<button type = "button" onclick="window.location.href='/api/admin/adminDash'">back</button> 
+            
+			
+		</div>

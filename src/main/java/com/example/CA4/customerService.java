@@ -1,5 +1,7 @@
 package com.example.CA4;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -22,6 +24,11 @@ public class customerService {
 	public customer loginCustomer(String username, String password)
 	{
 		return cRepo.findByUsernameAndPassword(username, password);
+	}
+	
+	public List<customer> allCustomers()
+	{
+		return cRepo.findAll();
 	}
 	
 	
